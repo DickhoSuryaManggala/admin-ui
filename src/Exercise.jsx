@@ -24,7 +24,7 @@ function Exercise() {
       </main>
 
       <footer className="mt-16 text-center text-gray-400 text-sm pb-8">
-        &copy; 2026 - Pemrograman Sisi Klien - A11.4602 - A11.2023.15323 - Dickho Surya Manggala
+        © 2026 - Pemrograman Sisi Klien - A11.4602 - A11.2023.15323 - Dickho Surya Manggala
       </footer>
     </div>
   );
