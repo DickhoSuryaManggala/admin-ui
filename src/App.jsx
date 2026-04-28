@@ -5,14 +5,13 @@ function App() {
     <main className="min-h-screen bg-special-mainBg flex justify-center items-center">
       {/* container start */}
       <div className="w-full max-w-sm">
-        {/* logo start */}
+
         <div className="flex justify-center font-poppins tracking-wide text-primary text-4xl">
           <span className="font-bold">FINE</span>
           bank
           <span className="font-bold">.IO</span>
         </div> 
-        {/* logo end */}
-                {/* form start */}
+        
         <div className="mb-6">
           <form action="">
             <div>
