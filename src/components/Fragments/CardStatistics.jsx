@@ -1,13 +1,25 @@
-import React from 'react';
-import Card from '../Elements/Card';
+import React from "react";
+import Card from "../Elements/Card";
+import BarsDataset from "../Elements/BarsDataset";
 
-function CardStatistics() {
+function CardStatistic(props) {
+  const { data } = props;
+
   return (
-    <Card
-      title="Statistics"
-      desc="Weekly financial stats show your saving rate, spending behavior, and account growth across your main categories."
-    />
+    <>
+      <Card
+        title="Statistics"
+        desc={
+          <>
+            <select className="font-bold text-2xl ">
+              <option>Weekly Comparison</option>
+            </select>
+            <BarsDataset dataset={data} />
+          </>
+        }
+      />
+    </>
   );
 }
 
-export default CardStatistics;
+export default CardStatistic;
