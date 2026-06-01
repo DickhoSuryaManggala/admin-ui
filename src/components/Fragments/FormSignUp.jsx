@@ -1,17 +1,25 @@
 import LabeledInput from "../Elements/LabeledInput";
-import CheckBox from "../Elements/CheckBox";
 import Button from "../Elements/Button";
 
-function FormSignIn() {
+function FormSignUp() {
     return (
       <>
         {/* Form start */}
         <div className="mb-16 rounded-3xl px-8 py-8">
           <div className="mb-4 text-center">
-            <h1 className="text-xl font-bold text-slate-900">Sign in to your account</h1>
+            <h1 className="text-xl font-bold text-slate-900">Create an account</h1>
           </div>
 
           <form action="">
+            <div className="mb-6">
+              <LabeledInput
+                label="Name"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Tanzir Rahman"
+              />
+            </div>
             <div className="mb-6">
               <LabeledInput
                 label="Email address"
@@ -30,18 +38,18 @@ function FormSignIn() {
                 placeholder="************"
               />
             </div>
-            <div className="mb-6">
-              <CheckBox
-                label="Keep me signed in"
-                id="status"
-                name="status"
-              />
-            </div>
-            <Button>Sign in</Button>
+            <p className="mb-6 text-xs text-slate-500">
+              By continuing, you agree to our{' '}
+              <a href="#" className="font-semibold text-primary hover:underline">
+                terms of service
+              </a>
+              .
+            </p>
+            <Button>Sign up</Button>
 
             <div className="relative my-9 flex items-center justify-center text-xs text-slate-500">
               <div className="absolute inset-x-0 h-px bg-slate-200"></div>
-              <span className="relative bg-transparent px-3">or sign in with</span>
+              <span className="relative bg-transparent px-3">or sign up with</span>
             </div>
 
             <div className="mb-8">
@@ -76,9 +84,9 @@ function FormSignIn() {
             </div>
 
             <div className="flex justify-center text-sm text-slate-500">
-              Don't have an account?{' '}
+              Already have an account?{' '}
               <a href="#" className="font-semibold text-primary hover:underline">
-                Create one here
+                Sign in here
               </a>
             </div>
           </form>
@@ -87,4 +95,4 @@ function FormSignIn() {
     );
 }
 
-export default FormSignIn;
+export default FormSignUp;
