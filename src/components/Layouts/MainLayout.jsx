@@ -1,7 +1,7 @@
 ﻿import React from "react";
 import Logo from "../Elements/Logo";
 import Icon from "../Elements/Icon";
-import Input from "../Elements/Input";
+import Input from "../Elements/input";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { NavLink } from "react-router-dom";
 
