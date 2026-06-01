@@ -1,6 +1,7 @@
 import LabeledInput from "../Elements/LabeledInput";
 import CheckBox from "../Elements/CheckBox";
 import Button from "../Elements/Button";
+import { Link } from "react-router-dom";
 
 function FormSignIn() {
     return (
@@ -43,7 +44,7 @@ function FormSignIn() {
               <div className="absolute inset-x-0 h-px bg-slate-200"></div>
               <span className="relative bg-transparent px-3">or sign in with</span>
             </div>
-
+            {/* sign in with google start */}
             <div className="mb-8">
               <Button type="button" variant="secondary">
                 <span className="flex items-center justify-center gap-2">
@@ -74,13 +75,13 @@ function FormSignIn() {
                 </span>
               </Button>
             </div>
-
-            <div className="flex justify-center text-sm text-slate-500">
-              Don't have an account?{' '}
-              <a href="#" className="font-semibold text-primary hover:underline">
-                Create one here
-              </a>
+            {/* sign in with google end */}
+            {/* link start */}
+            <div className="flex justify-center">
+                <Link to="/register" className="text-primary text-sm font-bold">
+                Create an account</Link>
             </div>
+            {/* link end */}
           </form>
         </div>
       </>
