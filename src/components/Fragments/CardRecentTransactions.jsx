@@ -1,0 +1,59 @@
+import React, { useState } from "react";
+import Card from "../Elements/Card";
+
+function CardRecentTransactions(props) {
+  const { data = [] } = props;
+  const tabs = ["All", "Revenue", "Expense"];
+  const [activeTab, setActiveTab] = useState("All");
+
+  return (
+    <>
+      <Card
+        title="Recent Transactions"
+        link="/transactions"
+        desc={
+          <>
+            <div className="mb-4">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={
+                    activeTab === tab
+                      ? "px-4 font-bold text-primary border-b-4 border-primary"
+                      : "px-4 font-bold text-gray-01"
+                  }
+                  value={tab}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+
+            {data.map((item) => (
+              <div key={item.id} className="flex justify-between my-6">
+                <div className="flex">
+                  <div className="bg-special-bg text-gray-02 px-3 rounded-lg flex flex-col place-content-center">
+                    {item.icon}
+                  </div>
+                  <div className="ms-4">
+                    <span className="text-xl font-bold">{item.title}</span>
+                    <br />
+                    <span className="text-gray-02">{item.date}</span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <span className="text-xl font-bold text-gray-02">{item.amount}</span>
+                  <br />
+                  <span className="text-gray-02">{item.date}</span>
+                </div>
+              </div>
+            ))}
+          </>
+        }
+      />
+    </>
+  );
+}
+
+export default CardRecentTransactions;
