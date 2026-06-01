@@ -4,7 +4,7 @@ function Card(props) {
   const { title, link = false, desc, className = "" } = props;
 
   return (
-    <div className={`h-full flex flex-col ${className}`}>
+    <div className= "h-full flex flex-col">
       <div className="flex justify-between items-center text-gray-02 mb-2">
         <div className="text-2xl font-semibold">{title}</div>
         {link && <div className="text-xs text-gray-03 cursor-pointer">View All</div>}

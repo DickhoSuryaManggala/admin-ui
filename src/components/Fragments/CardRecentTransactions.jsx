@@ -4,7 +4,10 @@ import Card from "../Elements/Card";
 function CardRecentTransactions(props) {
   const { data = [] } = props;
   const tabs = ["All", "Revenue", "Expense"];
-  const [activeTab, setActiveTab] = useState("All");
+  const [active, setActive] = useState("All");
+
+const filteredData =
+    active === "All" ? data : data.filter((item) => item.type === active);
 
   return (
     <>
@@ -17,9 +20,9 @@ function CardRecentTransactions(props) {
               {tabs.map((tab) => (
                 <button
                   key={tab}
-                  onClick={() => setActiveTab(tab)}
+                  onClick={() => setActive(tab)}
                   className={
-                    activeTab === tab
+                    active === tab
                       ? "px-4 font-bold text-primary border-b-4 border-primary"
                       : "px-4 font-bold text-gray-01"
                   }
